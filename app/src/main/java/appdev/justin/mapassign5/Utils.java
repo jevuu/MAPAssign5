@@ -105,10 +105,13 @@ public class Utils {
             for(int i = 0; i < earthquakeArray.length(); i++) {
                 JSONObject currentEarthquake    = earthquakeArray.getJSONObject(i);
                 JSONObject properties           = currentEarthquake.getJSONObject("properties");
+                JSONObject geometry             = currentEarthquake.getJSONObject("geometry");
                 String title    = properties.getString("title");
                 String time     = properties.getString("time");
                 String url      = properties.getString("url");
-                quakeList.add(title + "@@" + time + "@@" + url);
+                String mag      = properties.getString("mag");
+                String coords   = geometry.getString("coordinates");
+                quakeList.add(title + "@@" + time + "@@" + url + "@@" + mag + "@@" + coords);
             }
             return quakeList;
         } catch(JSONException e) {

@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">MAPAssign5</string>
+    <string name="app_name">MAPAssign6</string>
+
+    <string-array name="arrayOrderBy">
+        <item>magnitude</item>
+        <item>time</item>
+    </string-array>
 </resources>
