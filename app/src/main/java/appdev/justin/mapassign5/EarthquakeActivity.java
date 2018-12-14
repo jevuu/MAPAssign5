@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -84,7 +85,7 @@ class CustomListAdapter extends ArrayAdapter<String> {
         Date date = new Date(Long.parseLong(earthInfo[1]));
         SimpleDateFormat dateFormat = new SimpleDateFormat("E MMM dd kk:mm:ss zzz yyyy");
         String stringDate = dateFormat.format(date);
-        textInfo.setText(earthInfo[0] + "\n" + stringDate);
+        textInfo.setText(Html.fromHtml("<b>" + earthInfo[0] + "</b><br />" + stringDate));
         textInfo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

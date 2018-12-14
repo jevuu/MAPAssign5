@@ -38,13 +38,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Set spinner and get selection
+        //Set spinner
         spinOrderBy = findViewById(R.id.spinOrderBy);
         ArrayAdapter<CharSequence> spinOrderByAdapter = ArrayAdapter.createFromResource(this,
-                R.array.arrayOrderBy, android.R.layout.simple_spinner_item);
-        spinOrderByAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                R.array.arrayOrderBy, R.layout.spinner_item);
+        spinOrderByAdapter.setDropDownViewResource(R.layout.spinner_dropdown_item);
         spinOrderBy.setAdapter(spinOrderByAdapter);
-        stringOrderBy = spinOrderBy.getSelectedItem().toString();
 
         //Set starting date to current date and display date
         stringStartDate = df.format(d);
@@ -59,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //Get user input number of earthquakes to list
                 editNumberEarthquakes = findViewById(R.id.editNumberEarthquakes);
+                stringOrderBy = spinOrderBy.getSelectedItem().toString();
                 stringLimit = editNumberEarthquakes.getText().toString();
 
                 Intent intent = new Intent(getApplicationContext(), EarthquakeActivity.class);
@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Fragment for date selection pop-up
     public static class DatePickerFragment extends DialogFragment
             implements DatePickerDialog.OnDateSetListener {
 

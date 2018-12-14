@@ -14,37 +14,50 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#f78"
             android:gravity="center"
-            android:paddingVertical="15sp"
-            android:textSize="24sp"
+            android:textColor="#fff"
+            android:textSize="30sp"
+            android:text="Justin Vuu"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="20sp"
+            android:textSize="30sp"
             android:textColor="#000"
             android:text="Earthquake\nParameters" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingVertical="5sp"
             android:orientation="horizontal"
             android:gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
+                android:textSize="20sp"
                 android:text="Number of Earthquakes: " />
             <EditText
                 android:id="@+id/editNumberEarthquakes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLength="2"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textSize="20sp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingVertical="5sp"
             android:orientation="horizontal"
             android:gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
+                android:textSize="20sp"
                 android:text="Order By: " />
             <Spinner
                 android:id="@+id/spinOrderBy"
@@ -54,13 +67,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:paddingVertical="15sp"
             android:orientation="horizontal"
             android:gravity="center">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textAllCaps="true"
+                android:background="#3be"
                 android:textColor="#000"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
                 android:text="Start Date: "
                 android:onClick="showDatePickerDialog"/>
             <TextView
@@ -68,15 +85,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000"
+                android:textSize="20sp"
                 android:text="2018-12-6"/>
         </LinearLayout>
         <Button
             android:id="@+id/btnSubmit"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#d00"
+            android:layout_marginHorizontal="10sp"
+            android:background="#c00"
             android:textColor="#fff"
-            android:textSize="24sp"
+            android:textSize="30sp"
             android:text="Submit"/>
     </LinearLayout>
 
